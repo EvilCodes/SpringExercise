@@ -156,6 +156,25 @@
     
     </bean>
     
+    <!-- 有关@Qualified的使用 -->
+    <bean id="IPhoneX" class="com.black.qualify.Phone">
+    	<property name="name" value="IPhoneX"></property>
+    	<property name="screenSize" value="5.5"></property>
+    	<property name="weight" value="2"></property>
+    	<property name="desc" value="这是一款青春时尚的高颜值全屏手机"></property>
+    	<property name="price" value="8999"></property>
+    </bean>
+    
+      <bean id="xiaoMi6s" class="com.black.qualify.Phone">
+    	<property name="name" value="xiaoMi6s"></property>
+    	<property name="screenSize" value="5.2"></property>
+    	<property name="weight" value="2"></property>
+    	<property name="desc" value="精巧，时尚，高颜值，这就是小米6s"></property>
+    	<property name="price" value="3200"></property>
+    </bean>
+    
+    <bean id="phoneCollect" class="com.black.qualify.PhoneCollect"></bean>
+    
     
     
 </beans>
