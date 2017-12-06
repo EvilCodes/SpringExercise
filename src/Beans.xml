@@ -11,6 +11,8 @@
 
     >
     
+    <context:annotation-config />
+    
     
     <bean id="helloworld" class="com.black.beanfactory.HelloWorld">
     	<property name="message" value="HelloWorld"></property>
@@ -57,7 +59,6 @@
   <bean id="textEditor" class="com.black.ioc.TextEditor">
   	<constructor-arg ref="spellChecker"></constructor-arg>
   	
-  
   </bean>
   
   <bean id="spellChecker" class="com.black.ioc.SpellChecker"></bean>
@@ -127,9 +128,17 @@
     </bean>
     
     <bean id="StuMsg" class="com.black.autowired.StuMsg"></bean>
-
     
     
     
     
+  
+	
+    <!-- @required注解的使用 -->
+    <bean id="stuMsg1" class="com.black.required.StuMsg">
+    	<property name="name" value="小张"></property>
+    	<property name="age" value="22"></property>
+    	<property name="hobbys" value="英雄联盟"></property>
+    	<!-- <property name="gendar" value="男"></property> -->
+    </bean>
 </beans>
