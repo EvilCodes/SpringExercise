@@ -176,5 +176,17 @@
     <bean id="phoneCollect" class="com.black.qualify.PhoneCollect"></bean>
     
     
+    <!-- 有关@Resource以及@PreDestroy，@PostConstruct的使用 -->
+    <bean id="car" class="com.black.jsr.Car">
+    	<property name="name" value="宝马"></property>
+    	<property name="color" value="red"></property>
+    	<property name="style" value="跑车"></property>
+    	<property name="speed" value="200"></property>
+    </bean>
+    
+    
+    <bean id="carDesc" class="com.black.jsr.CarDesc"></bean>
+    
+    
     
 </beans>
