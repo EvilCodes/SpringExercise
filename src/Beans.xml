@@ -1,0 +1,135 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+    xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+    xmlns:context="http://www.springframework.org/schema/context"
+     xmlns:p="http://www.springframework.org/schema/p"
+    xsi:schemaLocation="
+    http://www.springframework.org/schema/beans
+    http://www.springframework.org/schema/beans/spring-beans-3.0.xsd
+    http://www.springframework.org/schema/context 
+    http://www.springframework.org/schema/context/spring-context-3.0.xsd"
+
+    >
+    
+    
+    <bean id="helloworld" class="com.black.beanfactory.HelloWorld">
+    	<property name="message" value="HelloWorld"></property>
+    
+    </bean>
+    
+    <bean id="teacher" class="com.black.beanscope.Teacher" scope="singleton">
+    	<property name="name" value="张三"></property>
+    	<property name="course" value="物理"></property>
+    	<property name="gendar" value="男"></property>
+    	<property name="age" value="22"></property>
+    </bean>
+    
+    <bean id="lifetime" class="com.black.beanlifetime.LifeBean" init-method="init" destroy-method="destroy">
+    	<property name="name" value="你好"></property>
+    	<property name="time" value="2017.11.24"></property>
+    	<property name="nums" value="3"></property>
+    
+    </bean>
+    
+    
+    <bean id="processor" class="com.black.beanpostprocessor.HelloWorld" init-method="init" destroy-method="destroy">
+    	<property name="msg" value="这是一条好消息"></property>
+    
+    </bean>
+    
+  <bean  class="com.black.beanpostprocessor.InitHelloWorld"></bean>
+  
+  <bean id="child" class="com.black.beaninherit.Child" parent="parent">
+  	<property name="name" value="小明"></property>
+  	<property name="age" value="22"></property>
+  
+  </bean>
+  
+  <bean id="parent" class="com.black.beaninherit.Parent" abstract="true">
+  	<property name="name" value="老张"></property>
+  	<property name="hobbys" value="看书"></property>
+  	<property name="age" value="50"></property>
+  
+  </bean>
+  
+  
+  <!-- 有关IOC的bean基于构造器的注入 -->
+  <bean id="textEditor" class="com.black.ioc.TextEditor">
+  	<constructor-arg ref="spellChecker"></constructor-arg>
+  	
+  
+  </bean>
+  
+  <bean id="spellChecker" class="com.black.ioc.SpellChecker"></bean>
+    
+    
+    <!-- 设置注入P标签后边为实体类中要注入的具体的引用如果是其他的类要加-ref -->
+    <bean id="msgEntity" class="com.black.setter.ShowEntity"
+    p:showMsg-ref="showMsg"></bean>
+    <bean id="showMsg" class="com.black.setter.ShowMsg"></bean>
+    
+    
+    <!-- 内部注入类inner -->
+    <bean id="entityMsg" class="com.black.innerproperty.MsgEntity">
+    	<property name="showEntity">
+    		<bean class="com.black.innerproperty.MsgShow"></bean>
+    	</property>
+    </bean>
+    
+    
+    
+ 
+    <!-- 注入集合 -->
+    <bean id="injectColl" class="com.black.collection.CollectionEntity">
+    	<property name="sectionList">
+    		<list>
+    			<value>面向对象</value>
+    			<value>多线程</value>
+    			<value>反射</value>
+    		</list>
+    	
+    	</property>
+    	
+    	<property name="countrySet">
+    		<set>
+    			<value>中国</value>
+    			<value>美国</value>
+    			<value>俄罗斯</value>
+    		</set>
+    	</property>
+    	<property name="schoolPro">
+    		<props>
+    			<prop key="one">小学</prop>
+    			<prop key="two">初中</prop>
+    			<prop key="three">高中</prop>
+    		</props>
+    	
+    	</property>
+    	<property name="bookMap">
+    		<map>
+    			<entry key="one" value="基督山伯爵"></entry>
+    			<entry key="two" value="达芬奇密码"></entry>
+    			<entry key="three" value="钢铁是怎样炼成的"></entry>
+    		</map>
+    	
+    	</property>
+    
+    </bean>
+    
+    
+    <!-- autoWired的使用 -->
+    <!-- autowirde byname的使用 -->
+    <bean id="stu" class="com.black.autowired.Student"
+    autowire="constructor">
+    	<constructor-arg value="小王"></constructor-arg>
+    	<!-- <property name="gendar" value="男"></property>
+    	<property name="age" value="23"></property> -->
+    </bean>
+    
+    <bean id="StuMsg" class="com.black.autowired.StuMsg"></bean>
+
+    
+    
+    
+    
+</beans>
