@@ -139,6 +139,23 @@
     	<property name="name" value="小张"></property>
     	<property name="age" value="22"></property>
     	<property name="hobbys" value="英雄联盟"></property>
-    	<!-- <property name="gendar" value="男"></property> -->
+    	 <property name="gendar" value="男"></property>
     </bean>
+    
+    
+    <!-- @AutoWired的使用情况 -->
+    
+    <bean id="tea" class="com.black.annotation.Teacher">
+	   <!--  <property name="age" value="23"></property> -->
+	   <property name="name" value="小明"></property> 
+	    <property name="course" value="Java"></property>
+	    <property name="hobbys" value="篮球"></property>
+    </bean>
+    
+    <bean id="teaMsg" class="com.black.annotation.TeacherMsg">
+    
+    </bean>
+    
+    
+    
 </beans>
