@@ -183,9 +183,16 @@
     	<property name="style" value="跑车"></property>
     	<property name="speed" value="200"></property>
     </bean>
-    
-    
     <bean id="carDesc" class="com.black.jsr.CarDesc"></bean>
+    
+    <!-- Spring事物处理 -->
+    <bean id="hello" class="com.black.thingslistenter.HelloWorld">
+    	
+    </bean>
+    
+    <bean id="startHandler" class="com.black.thingslistenter.ThingStart"></bean>
+    <bean id="stopHandler" class="com.black.thingslistenter.ThingStop"></bean>
+    
     
     
     
