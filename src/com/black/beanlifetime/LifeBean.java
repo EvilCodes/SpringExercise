@@ -27,12 +27,12 @@ public class LifeBean {
 	}
 	
 	public void init(){
-		System.out.println("ÉúÃüÖÜÆÚ¿ªÊ¼ÁË");
+		System.out.println("ç±»è¢«åˆå§‹åŒ–äº†");
 		
 	}
 	
 	public void destroy(){
-		System.out.println("Àà±»Ïú»ÙÁË");
+		System.out.println("è¯¥ç±»ä»¥åŠè¢«é”€æ¯");
 	}
 	
 

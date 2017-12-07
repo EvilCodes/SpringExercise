@@ -13,12 +13,12 @@ public class HelloWorld {
 	}
 	
 	public void init(){
-		System.out.println("类将被初始化");
+		System.out.println("绫昏鍒濆鍖栦簡");
 		
 	}
 	public void destroy(){
 		
-		System.out.println("该类已经被销毁");
+		System.out.println("绫诲凡缁忚閿�姣佷簡");
 	}
 	
 
