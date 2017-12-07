@@ -194,6 +194,11 @@
     <bean id="stopHandler" class="com.black.thingslistenter.ThingStop"></bean>
     
     
+    <!-- 自定义事件的处理 -->
+    
+    <bean id="myselfHandler" class="com.black.selfthings.MySelfHandler"/>
+    <bean id="myselfPublisher" class="com.black.selfthings.MySelfPublisher"/>
+    
     
     
 </beans>

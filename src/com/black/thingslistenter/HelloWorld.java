@@ -3,12 +3,12 @@ package com.black.thingslistenter;
 public class HelloWorld {
 	
 	public void getIn(){
-		System.out.println("»¶Ó­½øÈëÉÏÏÂÎÄ¼àÌıÏµÍ³");
+		System.out.println("æ¬¢è¿è¿›å…¥ä¸Šä¸‹æ–‡ç›‘æ§ç³»ç»Ÿ");
 	}
 	
 	public void sayHello(){
 		
-		System.out.println("This is ApplicationContextListenter£¬Hello£¡");
+		System.out.println("This is ApplicationContextListenter HelloWorld");
 	}
 
 }
