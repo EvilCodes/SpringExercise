@@ -241,5 +241,9 @@
 		<property name="dataSource" ref="dataSource"></property>
 	</bean>
 	
+	<bean id="stuFunction" class="com.black.function.IGetStuImpl">
+		<property name="dataSource" ref="dataSource"></property>
+	</bean>
+	
 	
 </beans>
