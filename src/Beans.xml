@@ -245,5 +245,17 @@
 		<property name="dataSource" ref="dataSource"></property>
 	</bean>
 	
+	<!--事务管理函数式编程 -->
+	
+	<bean id="transactionManager" class="org.springframework.jdbc.datasource.DataSourceTransactionManager">
+		<property name="dataSource" ref="dataSource"></property>
+	</bean>
+	
+	<bean id="studentJDBCTemplate" class="com.black.traction.program.StudentJDBCTemplate">
+		<property name="dataSource" ref="dataSource"></property>
+		<property name="transactionManager" ref="transactionManager"></property>
+	</bean>
+	
+	
 	
 </beans>
